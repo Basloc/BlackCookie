@@ -5,8 +5,19 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BlackCookie"
         mc:Ignorable="d"
-        Title="MainWindow" Height="460" Width="800">
+        Title="BlackCookie" Height="460" Width="800">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/pixel_character_full_body_sprites_6b5bcf85.png"/>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="label_points" Content="Bananes : 0" Margin="350,54,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="22"/>
+        <Button Content="" HorizontalAlignment="Center" Margin="0,231,0,0" VerticalAlignment="Top" Height="230" Width="288" BorderBrush="{x:Null}" Click="Point_onclick" Style="{StaticResource MyButtonStyle}">
+            <Button.Background>
+                <ImageBrush ImageSource="/pixel_character_full_body_sprites_eb0d1aad-removebg-preview.png" Stretch="Fill"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>

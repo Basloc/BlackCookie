@@ -7,4 +7,14 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="pixel_character_full_body_sprites_6b5bcf85.png" />
+    <None Remove="pixel_character_full_body_sprites_eb0d1aad-removebg-preview.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="pixel_character_full_body_sprites_6b5bcf85.png" />
+    <Resource Include="pixel_character_full_body_sprites_eb0d1aad-removebg-preview.png" />
+  </ItemGroup>
+
 </Project>

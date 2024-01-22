@@ -20,9 +20,19 @@ namespace BlackCookie
     /// </summary>
     public partial class MainWindow : Window
     {
+        private int points = 0;
         public MainWindow()
         {
             InitializeComponent();
         }
+
+        private void Point_onclick(object sender, RoutedEventArgs e)
+        {
+            points++;
+            label_points.Content = "Bananes : "+points.ToString();
+
+        }
+
+        
     }
 }

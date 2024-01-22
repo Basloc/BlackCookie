@@ -4,6 +4,12 @@
              xmlns:local="clr-namespace:BlackCookie"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="theme/Dictionary1.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
