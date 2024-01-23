@@ -53,6 +53,13 @@
                 <ImageBrush ImageSource="/oui-removebg-preview.png"/>
             </Button.Background>
         </Button>
+        <Label Content="500 $
+               " HorizontalAlignment="Left" Margin="241,119,0,0" VerticalAlignment="Top" Height="34" Width="63" RenderTransformOrigin="0.015,0.605"/>
+        <Label Content="1000 $" HorizontalAlignment="Left" Margin="457,119,0,0" VerticalAlignment="Top" Height="34" Width="63" RenderTransformOrigin="0.015,0.605"/>
+        <Label Content="5000 $" HorizontalAlignment="Left" Margin="242,224,0,0" VerticalAlignment="Top" Height="34" Width="62" RenderTransformOrigin="0.015,0.605"/>
+        <Label Content="10000 $" HorizontalAlignment="Left" Margin="482,224,0,0" VerticalAlignment="Top" Height="34" Width="62" RenderTransformOrigin="0.015,0.605"/>
+        <Label Content="50000 $" HorizontalAlignment="Left" Margin="244,406,0,0" VerticalAlignment="Top" Height="34" Width="62" RenderTransformOrigin="0.015,0.605"/>
+        <Label Content="100000 $" HorizontalAlignment="Left" Margin="482,406,0,0" VerticalAlignment="Top" Height="34" Width="62" RenderTransformOrigin="0.015,0.605"/>
 
     </Grid>
 </Window>
