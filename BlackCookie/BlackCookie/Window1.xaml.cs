@@ -10,33 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace BlackCookie
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logique d'interaction pour Window1.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Window1 : Window
     {
-        private int points = 0;
-        public MainWindow()
+        public Window1()
         {
             InitializeComponent();
         }
 
-        private void Point_onclick(object sender, RoutedEventArgs e)
+        private void GoHome(object sender, RoutedEventArgs e)
         {
-            points++;
-            label_points.Content = "Bananes : "+points.ToString();
-
-        }
-
-        private void GoToShop(object sender, RoutedEventArgs e)
-        {
-            var wind = new Window1();
-            wind.Show();
+            var windo = new MainWindow();
+            windo.Show();
         }
     }
 }

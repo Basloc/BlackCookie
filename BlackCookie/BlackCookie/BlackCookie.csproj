@@ -8,13 +8,33 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="ak-removebg-preview.png" />
+    <None Remove="banjo.png" />
+    <None Remove="batte.png" />
+    <None Remove="fistanal.png" />
+    <None Remove="fondshop.png" />
+    <None Remove="fouet.png" />
+    <None Remove="moneygang-removebg-preview.png" />
+    <None Remove="moneygang.png" />
+    <None Remove="oui-removebg-preview.png" />
     <None Remove="pixel_character_full_body_sprites_6b5bcf85.png" />
     <None Remove="pixel_character_full_body_sprites_eb0d1aad-removebg-preview.png" />
+    <None Remove="storebanane-removebg-preview.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="ak-removebg-preview.png" />
+    <Resource Include="banjo.png" />
+    <Resource Include="batte.png" />
+    <Resource Include="fistanal.png" />
+    <Resource Include="fondshop.png" />
+    <Resource Include="fouet.png" />
+    <Resource Include="moneygang-removebg-preview.png" />
+    <Resource Include="moneygang.png" />
+    <Resource Include="oui-removebg-preview.png" />
     <Resource Include="pixel_character_full_body_sprites_6b5bcf85.png" />
     <Resource Include="pixel_character_full_body_sprites_eb0d1aad-removebg-preview.png" />
+    <Resource Include="storebanane-removebg-preview.png" />
   </ItemGroup>
 
 </Project>
