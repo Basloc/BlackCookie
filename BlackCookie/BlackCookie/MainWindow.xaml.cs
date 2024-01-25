@@ -12,6 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System;
+using System.IO;
+using System.ComponentModel;
+using System.Windows.Ink;
 
 namespace BlackCookie
 {
@@ -20,7 +24,7 @@ namespace BlackCookie
     /// </summary>
     public partial class MainWindow : Window
     {
-        private int points = 0;
+        int points = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -29,14 +33,26 @@ namespace BlackCookie
         private void Point_onclick(object sender, RoutedEventArgs e)
         {
             points++;
-            label_points.Content = "Bananes : "+points.ToString();
+            label_points.Content = "Bananes : " + points;
 
         }
 
         private void GoToShop(object sender, RoutedEventArgs e)
         {
-            var wind = new Window1();
-            wind.Show();
+            Window1 shopWindow = new Window1(this);
+            shopWindow.Show();
+        }
+
+        public void Acheter(int cout)
+        {
+            if (points >= cout)
+            {
+                points -= cout;
+            }
+            else
+            {
+                MessageBox.Show("Pas assez de bananes ");
+            }
         }
     }
 }
