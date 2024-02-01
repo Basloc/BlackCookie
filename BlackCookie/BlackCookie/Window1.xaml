@@ -60,7 +60,13 @@
         <Label Content="10000 $" HorizontalAlignment="Left" Margin="482,224,0,0" VerticalAlignment="Top" Height="34" Width="62" RenderTransformOrigin="0.015,0.605"/>
         <Label Content="50000 $" HorizontalAlignment="Left" Margin="244,406,0,0" VerticalAlignment="Top" Height="34" Width="62" RenderTransformOrigin="0.015,0.605"/>
         <Label Content="100000 $" HorizontalAlignment="Left" Margin="482,406,0,0" VerticalAlignment="Top" Height="34" Width="62" RenderTransformOrigin="0.015,0.605"/>
-        <ListBox x:Name="upgradeList" Margin="10,28,613,50"/>
+        <ListBox x:Name="upgradeList" Margin="10,9,668,11">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Name}"/>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
         <Button Content="Purchase" Click="PurchaseUpgrade" HorizontalAlignment="Right" Margin="10"/>
     </Grid>
 </Window>
