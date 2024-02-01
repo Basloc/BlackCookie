@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 
 namespace BlackCookie
 {
-    class Items : DependencyObject
+    public class Items : DependencyObject
     {
         public int price;
         public static readonly DependencyProperty NameProperty =
@@ -18,14 +13,20 @@ namespace BlackCookie
             get { return (string)GetValue(NameProperty); }
             set { SetValue(NameProperty, value); }
         }
-        public string description{ get; set; }
+
+        public string description { get; set; }
         public int durabilitée { get; set; }
-        public Items(int price,string name,string description,int durabilitée) 
+
+        // Nouvelle propriété pour le chemin du fichier audio
+        public string SoundFilePath { get; set; }
+
+        public Items(int price, string name, string description, int durabilitée, string soundFilePath)
         {
             this.price = price;
             this.name = name;
             this.description = description;
             this.durabilitée = durabilitée;
+            this.SoundFilePath = soundFilePath;
         }
     }
 }
