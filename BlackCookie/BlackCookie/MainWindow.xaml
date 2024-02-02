@@ -12,7 +12,7 @@
         </Grid.Background>
         <Grid.ColumnDefinitions>
         </Grid.ColumnDefinitions>
-        <Label x:Name="label_points" Content="Bananes : 0" Margin="350,54,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="22"/>
+        <Label x:Name="label_points" Content="Bananes : 0" Margin="0,203,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="22"/>
         <Button Content="" HorizontalAlignment="Center" Margin="0,254,0,0" VerticalAlignment="Top" Height="230" Width="288" BorderBrush="{x:Null}" Click="Point_onclick" Style="{StaticResource MyButtonStyle}" RenderTransformOrigin="0.511,0.72">
             <Button.Background>
                 <ImageBrush ImageSource="/pixel_character_full_body_sprites_eb0d1aad-removebg-preview.png" Stretch="Fill"/>

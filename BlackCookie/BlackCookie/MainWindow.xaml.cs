@@ -4,6 +4,7 @@ using System.IO;
 using System;
 using System.Timers;
 using System.Windows.Threading;
+using System.Media;
 
 
 namespace BlackCookie
@@ -18,7 +19,8 @@ namespace BlackCookie
         private Random random = new Random();
         private Timer autoClickerTimer = new Timer();
         private Dispatcher uiDispatcher;
-        
+        private Items equippedItem;
+
 
         private static MainWindow? instance;
 
@@ -50,7 +52,7 @@ namespace BlackCookie
             points += cookieGains;
             ApplyRandomEvent();
             updateBananaCount();
-
+            PlaySound(@"C:\Users\Tran\Downloads\sound\slap-sound-effect-free.wav");
         }
 
         private void GoToShop(object sender, RoutedEventArgs e)
@@ -92,6 +94,11 @@ namespace BlackCookie
 
             // Sauvegardez le JSON dans un fichier
             File.WriteAllText("save.json", json);
+        }
+
+        public void EquipItem(Items item)
+        {
+            equippedItem = item;
         }
 
         public void LoadGame()
@@ -162,16 +169,42 @@ namespace BlackCookie
         {
             uiDispatcher.Invoke(() =>
             {
-                Click();
+                Click(isAutoClick: true); // Indique que le clic est automatique
             });
-            
         }
-        public  void Click()
+
+        public void Click(bool isAutoClick = false)
         {
-            points += cookieGains;
+            points++;
             updateBananaCount();
             ApplyRandomEvent();
-      
+
+            // Vérifie si le clic est manuel pour jouer le son
+            if (equippedItem != null)
+            {
+                PlaySound(equippedItem.SoundFilePath);
+            }
+            else if (!isAutoClick)
+            {
+                // Si aucun objet n'est équipé et que le clic n'est pas automatique, jouez le son par défaut
+                PlaySound(@"C:\Users\Tran\Downloads\sound\slap-sound-effect-free.wav");
+            }
+        }
+
+        private void PlaySound(string soundFilePath)
+        {
+            if (!string.IsNullOrEmpty(soundFilePath))
+            {
+                try
+                {
+                    SoundPlayer player = new SoundPlayer(soundFilePath);
+                    player.Play();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Erreur lors de la lecture du son : {ex.Message}", "Erreur de lecture du son", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            }
         }
 
     }
