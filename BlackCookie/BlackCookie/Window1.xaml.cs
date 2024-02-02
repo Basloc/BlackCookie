@@ -39,7 +39,7 @@ namespace BlackCookie
             // Initialisation des items du shop
             shopItems = new ObservableCollection<Items>
             {
-                new Items(5, "AK47", "2 bananes par cliques", 2),
+                new Items(50, "AK47", "2 bananes par cliques", 2),
                 new Items(1000, "FIST", "5 bananes par clique", 5),
                 new Items(5000, "BAT", "10 bananes par clique", 10),
                 new Items(10000, "WHIP", "15 bananes par clique", 15),

@@ -168,7 +168,7 @@ namespace BlackCookie
         }
         public  void Click()
         {
-            points += cookieGains;
+            points++;
             updateBananaCount();
             ApplyRandomEvent();
       
