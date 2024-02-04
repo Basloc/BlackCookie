@@ -10,6 +10,7 @@
     3- Amélioration de clique : Équipez les armes pour améliorer votre capacité à cliquer et gagner plus de bananes à chaque clic.
     4- Cliquer automatique : Activez la fonction de clique automatique pour gagner des bananes automatiquement, même lorsque vous ne cliquez pas.
     5- Randomizer : Chaque clic est sujet à un aléatoire, vous pouvez gagner des bananes ou en perdre.
+    6- Save : En quittant le jeu votre partie sera sauvergardée puis rechargée lors de la réouverture vous assurant de garde vos bananes et vos upgrades
 
 
 **Comment exécuter le jeu :**
