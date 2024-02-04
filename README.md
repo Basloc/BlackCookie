@@ -16,3 +16,10 @@
     Clonez ou téléchargez le dépôt du jeu
     Ouvrez le projet dans votre environnement de développement.
     Compilez et exécutez le projet "BlackCookie.exe" pour commencer à jouer.
+
+
+**Auteurs :**
+
+Développé par Bastien Locatelli aka Potichat
+Développé par Elouan Sausset aka ZemmourDu69
+Développé par Thien-Tin Tran aka LeJaune
