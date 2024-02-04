@@ -20,6 +20,6 @@
 
 **Auteurs :**
 
-Développé par Bastien Locatelli aka Potichat
-Développé par Elouan Sausset aka ZemmourDu69
-Développé par Thien-Tin Tran aka LeJaune
+    Développé par Bastien Locatelli aka Potichat
+    Développé par Elouan Sausset aka ZemmourDu69
+    Développé par Thien-Tin Tran aka LeJaune
