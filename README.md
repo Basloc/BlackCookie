@@ -1,4 +1,1 @@
-**BlackCookie**
-
-
-**Description :** BlackCookie est un jeu simple mais addictif développé en C#, inspiré du concept populaire de Cookie Clicker. Cependant, au lieu de cliquer sur des cookies, les joueurs cliquent sur un personnage de singe pour gagner des bananes. Ces bananes peuvent ensuite être utilisées dans la boutique du jeu pour acheter des armes, améliorant ainsi vos capacités de clic et vous permettant de gagner plus de bananes.
+**BlackCookie** est un jeu développé en C# qui s'inspire des principes du célèbre jeu "Cookie Clicker". Dans BlackCookie, vous incarnez un singe et votre objectif est de cliquer sur lui pour gagner des bananes. Avec ces bananes, vous pouvez accéder à la boutique du jeu pour acheter des armes et les équiper afin d'améliorer votre capacité à cliquer et ainsi gagner plus de bananes.
