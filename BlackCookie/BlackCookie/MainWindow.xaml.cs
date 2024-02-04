@@ -40,7 +40,7 @@ namespace BlackCookie
             InitializeComponent();
             LoadGame();
             uiDispatcher = Dispatcher.CurrentDispatcher;
-            autoClickerTimer.Interval = 1000; // 1000 millisecondes (1 seconde)
+            autoClickerTimer.Interval = 1000;
             autoClickerTimer.Elapsed += AutoClickerTimerElapsed;
             autoClickerTimer.Start();
             Closing += MainWindow_Closing;
@@ -52,8 +52,9 @@ namespace BlackCookie
             points += cookieGains;
             ApplyRandomEvent();
             updateBananaCount();
-            PlaySound(@"C:\Users\Tran\Downloads\sound\slap-sound-effect-free.wav");
+            Click(isAutoClick: false); // Appel de la méthode Click en spécifiant que le clic n'est pas automatique
         }
+
 
         private void GoToShop(object sender, RoutedEventArgs e)
         {
@@ -61,19 +62,20 @@ namespace BlackCookie
             shopWindow.Show();
         }
 
-        public void Acheter(int cout)
+        public bool Acheter(int cout)
         {
-
             if (points >= cout)
             {
                 points -= cout;
                 updateBananaCount();
+                return true;
             }
             else
             {
-                MessageBox.Show("Pas assez de bananes ");
+                return false;
             }
         }
+
         internal void UpdateClickValue(int value)
         {
             cookieGains += value;
@@ -81,18 +83,18 @@ namespace BlackCookie
 
         public void SaveGame()
         {
-            // Créez un objet de données à sauvegarder
+            
             Data data = new Data
             {
                 CookieCount = points,
                 ClickValue = cookieGains
-                // Ajoutez d'autres propriétés si nécessaire
+                
             };
 
-            // Convertissez l'objet en JSON
+            
             string json = JsonConvert.SerializeObject(data);
 
-            // Sauvegardez le JSON dans un fichier
+          
             File.WriteAllText("save.json", json);
         }
 
@@ -103,20 +105,20 @@ namespace BlackCookie
 
         public void LoadGame()
         {
-            // Vérifiez si le fichier de sauvegarde existe
+            
             if (File.Exists("save.json"))
             {
-                // Lisez le JSON depuis le fichier
+               
                 string json = File.ReadAllText("save.json");
 
-                // Désérialisez le JSON en objet
+                
                 Data data = JsonConvert.DeserializeObject<Data>(json);
 
-                // Mettez à jour les données du jeu
+                
                 points = data.CookieCount;
                 cookieGains = data.ClickValue;
                 updateBananaCount();
-                // Mettez à jour d'autres propriétés si nécessaire
+                
             }
         }
 
@@ -127,32 +129,32 @@ namespace BlackCookie
 
         private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
-            // Avant la fermeture, sauvegardez le jeu
+            
             SaveGame();
         }
 
         public void ApplyRandomEvent()
         {
-            // Générez un nombre aléatoire pour déterminer si un événement aléatoire se produit
-            if (random.NextDouble() < 0.1) // 10% de chance, ajustez selon vos besoins
+            
+            if (random.NextDouble() < 0.1)
             {
                 if (points > 150)
                 {
                     int randomSubtract = random.Next(1, 100);
                     points -= randomSubtract;
                 }
-                // Générez un montant aléatoire à soustraire du nombre de cookies
+                
                 
 
-                // Générez un montant aléatoire à soustraire du clickValue
+                
                 if (cookieGains > 15)
                 {
 
-                    int randomSubtractClickValue = random.Next(1, 5); // Par exemple, soustraire entre 1 et 5 au clickValue
+                    int randomSubtractClickValue = random.Next(1, 5);
                     cookieGains -= randomSubtractClickValue;
                 }
 
-                // Mettez à jour l'interface utilisateur
+                
                 updateBananaCount();
             }
         }
@@ -160,8 +162,8 @@ namespace BlackCookie
         {
             uiDispatcher.Invoke(() =>
             {
-                ApplyAutoClick(); // Appliquer le clic automatique
-                ApplyRandomEvent(); // Appliquer un événement aléatoire, si nécessaire
+                ApplyAutoClick();
+                ApplyRandomEvent();
             });
         }
 
@@ -169,7 +171,7 @@ namespace BlackCookie
         {
             uiDispatcher.Invoke(() =>
             {
-                Click(isAutoClick: true); // Indique que le clic est automatique
+                Click(isAutoClick: true);
             });
         }
 
@@ -179,17 +181,18 @@ namespace BlackCookie
             updateBananaCount();
             ApplyRandomEvent();
 
-            // Vérifie si le clic est manuel pour jouer le son
-            if (equippedItem != null)
+            // Vérifie s'il y a un objet équipé et si le clic n'est pas automatique
+            if (equippedItem != null && !isAutoClick)
             {
                 PlaySound(equippedItem.SoundFilePath);
             }
-            else if (!isAutoClick)
+            else if (!isAutoClick && equippedItem == null)
             {
-                // Si aucun objet n'est équipé et que le clic n'est pas automatique, jouez le son par défaut
                 PlaySound(@"C:\Users\Tran\Downloads\sound\slap-sound-effect-free.wav");
             }
         }
+
+
 
         private void PlaySound(string soundFilePath)
         {
