@@ -3,8 +3,16 @@
 
 **Fonctionnalités principales :**
 
-    Cliquer pour gagner : Cliquez sur le singe pour gagner des bananes.
-    Boutique : Utilisez vos bananes pour acheter des armes dans la boutique.
-    Amélioration de clique : Équipez les armes pour améliorer votre capacité à cliquer et gagner plus de bananes à chaque clic.
-    Cliquer automatique : Activez la fonction de clique automatique pour gagner des bananes automatiquement, même lorsque vous ne cliquez pas.
-    Randomizer : Chaque clic est sujet à un aléatoire, vous pouvez gagner des bananes ou en perdre.
+    1- Cliquer pour gagner : Cliquez sur le singe pour gagner des bananes.
+    2- Boutique : Utilisez vos bananes pour acheter des armes dans la boutique.
+    3- Amélioration de clique : Équipez les armes pour améliorer votre capacité à cliquer et gagner plus de bananes à chaque clic.
+    4- Cliquer automatique : Activez la fonction de clique automatique pour gagner des bananes automatiquement, même lorsque vous ne cliquez pas.
+    5- Randomizer : Chaque clic est sujet à un aléatoire, vous pouvez gagner des bananes ou en perdre.
+
+
+**Comment exécuter le jeu :**
+
+    Assurez-vous d'avoir installé un environnement de développement C# (tel que Visual Studio).
+    Clonez ou téléchargez le dépôt du jeu
+    Ouvrez le projet dans votre environnement de développement.
+    Compilez et exécutez le projet "BlackCookie.exe" pour commencer à jouer.
