@@ -184,11 +184,11 @@ namespace BlackCookie
             // Vérifie s'il y a un objet équipé et si le clic n'est pas automatique
             if (equippedItem != null && !isAutoClick)
             {
-                PlaySound(equippedItem.SoundFilePath);
+                //PlaySound(equippedItem.SoundFilePath);
             }
             else if (!isAutoClick && equippedItem == null)
             {
-                PlaySound(@"C:\Users\Tran\Downloads\sound\slap-sound-effect-free.wav");
+                //PlaySound(@"C:\Users\Tran\Downloads\sound\slap-sound-effect-free.wav");
             }
         }
 

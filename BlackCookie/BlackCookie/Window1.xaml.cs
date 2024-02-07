@@ -59,7 +59,7 @@ namespace BlackCookie
             {
                 if (mainWindow.Acheter(selectedUpgrade.price))
                 {
-                    PlaySound(selectedUpgrade.SoundFilePath);
+                    //PlaySound(selectedUpgrade.SoundFilePath);
 
                     MessageBox.Show($"Item '{selectedUpgrade.name}' acheté pour {selectedUpgrade.price} cookies. Votre solde actuel {mainWindow.points} est cookies.", "Achat réussi", MessageBoxButton.OK, MessageBoxImage.Information);
                     mainWindow.UpdateClickValue(selectedUpgrade.durabilitée);
